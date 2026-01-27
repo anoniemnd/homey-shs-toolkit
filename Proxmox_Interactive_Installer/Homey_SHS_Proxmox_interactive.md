@@ -71,7 +71,7 @@ Select the storage for the container template
 
 Select the storage for the container root filesystems.
 
-> **Note:** This dialog only appears if multiple root filesystem storages are configured. Otherwise, the only available storage is selected automatically. (screenshot for reference)
+> **Note:** This dialog only appears if multiple root filesystem storages are configured. Otherwise, the only available storage is selected automatically.
 
 ![Root filesystem storage](images/interactive_storage.png)
 
