@@ -14,7 +14,7 @@ The standard Homey SHS installer uses fixed defaults (`local`, `local-lvm`, `vmb
 
 ## Requirements
 
-- Proxmox VE 7.x or 8.x
+- **Proxmox VE 9.x** (uses Debian 13 template, same as official Homey installer)
 - Root access to the Proxmox host
 - Internet connection
 
