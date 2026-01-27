@@ -49,33 +49,45 @@ The wizard guides you through each configuration option:
 
 ### Step 1: Container ID
 
+Enter the container ID, default the first available ID.
+
 ![Container ID input dialog](images/interactive_container_id.png)
 
 ### Step 2: Hostname
+
+Enter the hostname, default homey-shs.
 
 ![Hostname input](images/interactive_hostname.png)
 
 ### Step 3: Template Storage
 
-Automatically shows all storages that support container templates.
+Select the storage for the container template
+
+> **Note:** This dialog only appears if multiple template storages are configured. Otherwise, the only available storage is selected automatically. (screenshot for reference)
 
 ![Template storage selection](images/interactive_template.png)
 
 ### Step 4: Root Filesystem Storage
 
-Automatically shows all storages that support container root filesystems.
+Select the storage for the container root filesystems.
+
+> **Note:** This dialog only appears if multiple root filesystem storages are configured. Otherwise, the only available storage is selected automatically. (screenshot for reference)
 
 ![Root filesystem storage](images/interactive_storage.png)
 
 ### Step 5: Network Bridge
 
-Automatically detects all available network bridges.
+Select the network bridge.
+
+> **Note:** This dialog only appears if multiple network bridges are configured. Otherwise, the only available storage is selected automatically. (screenshot for reference)
 
 ![Select network bridge](images/interactive_bridge.png)
 
 ### Step 6: VLAN Tag (optional)
 
-Only shown if the selected bridge is VLAN-aware.
+Enter a VLAN if required, otherwise leave blank
+
+> **Note:**: Only shown if the selected bridge is VLAN-aware.
 
 ![Select VLAN](images/interactive_vlan.png)
 
@@ -94,6 +106,8 @@ Only shown if the selected bridge is VLAN-aware.
 ![Enter Swap](images/interactive_swap.png)
 
 ### Step 8: Root Password
+
+Enter the root password, default: homey
 
 ![Enter root password](images/interactive_password.png)
 
