@@ -32,13 +32,13 @@ apt update && apt install -y whiptail jq
 ### Direct execution (recommended)
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/your-repo/homey-shs-toolkit/main/Proxmox_Interactive_Installer/homey-shs-proxmox-interactive.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/anoniemnd/homey-shs-toolkit/refs/heads/main/Proxmox_Interactive_Installer/homey-shs-proxmox-interactive.sh)"
 ```
 
 ### Manual download
 
 ```bash
-curl -O https://raw.githubusercontent.com/your-repo/homey-shs-toolkit/main/Proxmox_Interactive_Installer/homey-shs-proxmox-interactive.sh
+curl -O https://raw.githubusercontent.com/anoniemnd/homey-shs-toolkit/refs/heads/main/Proxmox_Interactive_Installer/homey-shs-proxmox-interactive.sh
 chmod +x homey-shs-proxmox-interactive.sh
 ./homey-shs-proxmox-interactive.sh
 ```
