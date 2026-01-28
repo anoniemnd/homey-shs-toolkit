@@ -109,12 +109,16 @@ get_input() {
 get_yes_no() {
   local title="$1"
   local prompt="$2"
-  local default="${3:-yes}"  # yes or no
-
+  local default="${3:-yes}"
+  
+  # Bereken benodigde dimensies
+  local height=$(($(echo -e "$prompt" | wc -l) + 8))  # +8 voor marges en knoppen
+  local width=70  # Of bereken de langste regel
+  
   if [[ "$default" == "no" ]]; then
-    whiptail --title "$title" --yesno "$prompt" 10 60 --defaultno 3>&1 1>&2 2>&3
+    whiptail --title "$title" --yesno "$prompt" "$height" "$width" --defaultno 3>&1 1>&2 2>&3
   else
-    whiptail --title "$title" --yesno "$prompt" 10 60 3>&1 1>&2 2>&3
+    whiptail --title "$title" --yesno "$prompt" "$height" "$width" 3>&1 1>&2 2>&3
   fi
 }
 
@@ -200,7 +204,7 @@ interactive_setup() {
   PASSWORD=$(get_input "Root Password" "Enter root password for container:" "homey") || exit 1
 
   # 9. Autostart Homey SHS service?
-  if get_yes_no "Autostart Homey SHS" "Start Homey SHS immediately after installation?\n\nChoose 'No' if you want to replace userdata first (migration)." "yes"; then
+  if get_yes_no "Autostart Homey SHS" "Start Homey SHS immediately after installation?\n\nChoose 'No' if you want to replace userdata first (migration).\n\nNote: When choosing 'No' Homey-SHS will auto-start on every future container reboot. See 'Migration Guide' for details." "yes"; then
     AUTOSTART_HOMEY_SHS="yes"
   else
     AUTOSTART_HOMEY_SHS="no"
